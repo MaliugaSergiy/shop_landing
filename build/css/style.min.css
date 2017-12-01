@@ -5075,7 +5075,7 @@ header {
           -ms-flex-direction: column;
               flex-direction: column; }
       header nav ul li a.side_link {
-        padding: 0;
+        padding: 10px;
         padding-left: 30px;
         width: 100%; }
         header nav ul li a.side_link a:hover {
@@ -5222,28 +5222,64 @@ header {
       padding: 3%;
       color: #FFF;
       z-index: 3; }
+      #start .wr .container .before, #start .wr .container .after,
+      #request .wr .container .before,
+      #request .wr .container .after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        transition: 0.3s; }
+      #start .wr .container .before,
+      #request .wr .container .before {
+        top: 10px;
+        right: 10px;
+        border-right: 2px solid #FFF;
+        border-top: 2px solid #FFF; }
+      #start .wr .container .after,
+      #request .wr .container .after {
+        bottom: 10px;
+        left: 10px;
+        border-left: 2px solid #FFF;
+        border-bottom: 2px solid #FFF; }
+      #start .wr .container:hover .before, #start .wr .container:hover .after,
+      #request .wr .container:hover .before,
+      #request .wr .container:hover .after {
+        width: 80px;
+        height: 80px;
+        opacity: 1; }
+      #start .wr .container:hover:before, #start .wr .container:hover:after,
+      #request .wr .container:hover:before,
+      #request .wr .container:hover:after {
+        width: 0px;
+        height: 0px;
+        opacity: 0; }
       #start .wr .container:before,
       #request .wr .container:before {
         position: absolute;
         content: "";
         display: block;
-        top: 15px;
-        left: 15px;
+        top: 10px;
+        left: 10px;
         border-left: 2px solid #FFF;
         border-top: 2px solid #FFF;
         width: 80px;
-        height: 80px; }
+        height: 80px;
+        transition: 0.3s; }
       #start .wr .container:after,
       #request .wr .container:after {
         position: absolute;
         content: "";
         display: block;
-        bottom: 15px;
-        right: 15px;
+        bottom: 10px;
+        right: 10px;
         border-right: 2px solid #FFF;
         border-bottom: 2px solid #FFF;
         width: 80px;
-        height: 80px; }
+        height: 80px;
+        transition: 0.3s; }
       #start .wr .container .roww1,
       #request .wr .container .roww1 {
         font-size: 36px; }
@@ -6232,7 +6268,8 @@ header {
           width: 100%;
           margin-top: 20px;
           padding: 13px;
-          box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.75); }
+          box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.75);
+          color: #fff; }
           #form_container .wr form.form_request .input_container .colll button.send_form.btn_red.btnn:hover {
             background-color: #37383D;
             color: #FFF; }
@@ -6351,9 +6388,9 @@ header {
       color: #E30413;
       margin-right: 5px; }
   .remodal_form button.send_form {
-    color: #FFF;
     background-color: #E30413;
-    border: none; }
+    border: none;
+    color: #fff; }
     .remodal_form button.send_form:hover {
       background-color: #37383D; }
 
