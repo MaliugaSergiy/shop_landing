@@ -243,7 +243,7 @@ $(document).ready(function () {
 
 	var clock;
 
-	var date = new Date(2017, 8, 1);
+	var date = new Date(2018, 0, 1);
 	var now = new Date();
 	var diff = (date.getTime() / 1000) - (now.getTime() / 1000);
 
